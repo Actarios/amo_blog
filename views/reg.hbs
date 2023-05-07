@@ -1,0 +1,44 @@
+<section class="light-blue lighten-5">
+    <div class="container">
+        <h3 class="title center teal-text text-darken-2">
+            Регистрация
+        </h3>
+         <div class="row">
+            <form method="POST" action="/registration" class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                <input placeholder="Логин" id="name" type="text" class="validate" name="username">
+                <label for="username">Логин</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="email" type="email" class="validate" name="email">
+                <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="password" type="password" class="validate" name="password">
+                <label for="password">Пароль</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="passwordConfirmation" type="password" class="validate" name="passwordConfirmation">
+                <label for="passwordConfirmation">Повторите пароль</label>
+                </div>
+            </div>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+            <div class="error">
+                <h4>Ошибки:</h4>
+                {{errorMsg}}
+            </div>
+            <div class="error">
+                <h4>Данные:</h4>
+                {{formData.password}}
+            </div>
+        </div>
+    </div>
+</section>
