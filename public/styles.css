@@ -9,11 +9,42 @@ h1, h2, h3 {
     margin: 0;
 }
 
-section {
+h3 {
+    font-size: 1.5em;
+}
+
+.pt-2 {
+    padding-top: 2em;
+}
+
+.pb-2 {
+    padding-bottom: 2em;
+}
+
+section.full {
     min-height: calc(100vh - 64px);
     padding: 30px 0;
 }
 
 .title {
     margin-bottom: 30px;
+}
+
+
+.blog_content .card {
+    padding: 20px;
+}
+
+.card_author {
+    border: 1px solid #e65100;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 4px 12px 2px;
+    background: #e65100;
+    color: #fff;
+}
+
+.card_date {
+    color: gray;
+    font-size: 0.8em;
 }

@@ -1,6 +1,67 @@
-<section class="light-blue lighten-5">
+<section class="light-blue lighten-5 pt-2 pb-2">
     <div class="container">
-        Здесь блог
-        <p>Привет, {{name}}!</p>
+        <h3>Привет, {{name}}!</h3>
+
+        {{#if isAuth}}
+        <div class="blog_section row">
+            <div class="card col m6">
+                <div class="card-content">
+                    <p>Введите сообщение:</p>
+
+                    <form method="POST" action="/blog" class="send-form">
+                        <div class="input-field">
+                        <textarea id="textarea" class="materialize-textarea" name="message"></textarea>
+                        <label for="textarea">Сообщение</label>
+                        </div>
+                        <button class="btn orange">Отправить</button>
+                    </form>
+                </div>
+            </div>            
+        </div>
+        {{else}}
+        <p class="pt-2 pb-2">Чтобы писать сообщения, пожалуйста авторизуйтесь.</p>
+        {{/if}}
+
+        <div class="blog_content">
+            <div class="card">
+                <div class="card">
+                    <div class="card_author">
+                        Admin
+                    </div>
+                    <div class="card_date">
+                        20.20.2023
+                    </div>
+                    <div class="card_content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_author">
+                        Admin
+                    </div>
+                    <div class="card_date">
+                        20.20.2023
+                    </div>
+                    <div class="card_content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_author">
+                        Admin
+                    </div>
+                    <div class="card_date">
+                        20.20.2023
+                    </div>
+                    <div class="card_content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
     </div>
+
 </section>

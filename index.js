@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
 const authRouter = require('./authRouter')
-const blogRouter = require('./routes/main')
+const blogRouter = require('./blogRouter')
+const mainRouter = require('./routes/main')
 const loginRouter = require('./routes/login')
 const regRouter = require('./routes/reg')
 
@@ -24,8 +25,9 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.json())
 app.use('/', authRouter)
-
 app.use('/', blogRouter)
+
+app.use('/', mainRouter)
 app.use('/', loginRouter)
 app.use('/', regRouter)
 

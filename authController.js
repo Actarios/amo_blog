@@ -76,7 +76,7 @@ class authController {
 
             res.cookie('token', String(token), {
                 secure: true,
-                httpOnly: true, // !
+                httpOnly: true,
                 sameSite: true,
                 expires: new Date(Date.now() + 900000)
             })
@@ -84,6 +84,15 @@ class authController {
         } catch (err) {
             console.log(err)
             res.status(400).json({message: 'Login Error'})
+        }
+    }
+
+    async logout(req, res) {
+        try {
+            res.clearCookie('token')
+            res.redirect('/')
+        } catch (err) {
+            console.log(err)
         }
     }
 

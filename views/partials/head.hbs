@@ -15,14 +15,11 @@
             <div class="nav-wrapper">
                 <a href="/" class="brand-logo">Блог</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    {{#if isLogin}}
-                        <li class="active"><a href="/login">Войти</a></li>
+                    {{#if isAuth}}
+                        <li>Вы зашли как: <strong>{{name}}</strong></li>
+                        <li><a href="/logout">Выйти</a></li>
                     {{else}}
                         <li><a href="/login">Войти</a></li>
-                    {{/if}}
-                    {{#if isReg}}
-                        <li class="active"><a href="/registration">Регистрация</a></li>
-                    {{else}}
                         <li><a href="/registration">Регистрация</a></li>
                     {{/if}}
                 </ul>
