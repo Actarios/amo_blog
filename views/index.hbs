@@ -19,44 +19,28 @@
             </div>            
         </div>
         {{else}}
-        <p class="pt-2 pb-2">Чтобы писать сообщения, пожалуйста авторизуйтесь.</p>
+        <p class="text pt-2 pb-2">Чтобы писать сообщения, пожалуйста <a href="/login">авторизуйтесь</a>.</p>
         {{/if}}
 
         <div class="blog_content">
             <div class="card">
-                <div class="card">
-                    <div class="card_author">
-                        Admin
+                {{#each messages}}
+                    <div class="card card_inner">
+                        <div class="card_edit d-none">
+                            <a href="##">Править</a>
+                            <a href="##">Удалить</a>
+                        </div>
+                        <div class="card_author">
+                            {{this.username}}
+                        </div>
+                        <div class="card_date">
+                            {{this.date}}
+                        </div>
+                        <div class="card_content">
+                            {{this.message}}
+                        </div>
                     </div>
-                    <div class="card_date">
-                        20.20.2023
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card_author">
-                        Admin
-                    </div>
-                    <div class="card_date">
-                        20.20.2023
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card_author">
-                        Admin
-                    </div>
-                    <div class="card_date">
-                        20.20.2023
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, enim.
-                    </div>
-                </div>
+                {{/each}}
                 
             </div>
         </div>

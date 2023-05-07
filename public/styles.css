@@ -21,6 +21,10 @@ h3 {
     padding-bottom: 2em;
 }
 
+.d-none {
+    display: none;
+}
+
 section.full {
     min-height: calc(100vh - 64px);
     padding: 30px 0;
@@ -42,9 +46,37 @@ section.full {
     padding: 4px 12px 2px;
     background: #e65100;
     color: #fff;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .card_date {
     color: gray;
     font-size: 0.8em;
+}
+
+.card_content {
+    padding: 0.5em 1em;
+    background-color: #a2a2e7;
+    border-radius: 4px;
+    margin-top: 1em;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.card_inner {
+    position: relative;
+}
+
+.card_edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 4px;
+    padding: 0.5em;
+    font-size: 0.8em;
+}
+
+.text a:hover,
+.card_edit a:hover {
+    color: #e65100;
 }

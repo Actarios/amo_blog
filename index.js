@@ -2,12 +2,16 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+// const moment = require('moment')
 
 const authRouter = require('./authRouter')
 const blogRouter = require('./blogRouter')
 const mainRouter = require('./routes/main')
 const loginRouter = require('./routes/login')
 const regRouter = require('./routes/reg')
+
+// moment().format()
+
 
 const PORT = process.env.PORT || 5000
 
