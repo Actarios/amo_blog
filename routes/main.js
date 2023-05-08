@@ -3,7 +3,6 @@ const router = new Router()
 const jwt = require('jsonwebtoken')
 const Blog = require('../models/Blog')
 
-
 router.get('/', async (req, res) => {
     const token = String(req.headers.cookie).slice(6)
     const decoded = jwt.decode(token)
@@ -17,7 +16,6 @@ router.get('/', async (req, res) => {
             let timestamp = key.date
             key.date = new Date(timestamp).toLocaleString()
         }
-        
     }
 
     res.render('index', {

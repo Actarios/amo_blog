@@ -3,7 +3,7 @@ const User = require('./models/User')
 const Role = require('./models/Role')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-// validationResult вернет ошибки вследствии валидации
+// validationResult вернет ошибки валидации
 const { validationResult } = require('express-validator')
 const {secret} = require('./config')
 const cookieParser = require('cookie-parser')
@@ -45,13 +45,9 @@ class authController {
             const salt = bcrypt.genSaltSync(saltRounds)
             const hashPassword = bcrypt.hashSync(password, salt);
             const userRole = await Role.findOne({value: "USER"})
-            // console.log(salt)
             const user = new User({username, email, password: hashPassword, roles: [userRole.value]})
-            // console.log(bcrypt.compareSync(password, hashPassword))
             await user.save()
             return res.json({message: 'Пользователь успешно зарегистрирован.'})
-
-
         } catch (err) {
             console.log(err)
             res.status(400).json({message: 'Registration Error'})
@@ -108,7 +104,7 @@ class authController {
             // await adminRole.save()
             // res.json('server work')
         } catch (err) {
-            
+            console.log(err)
         }
     }
 }

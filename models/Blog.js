@@ -6,6 +6,4 @@ const Blog = new Schema({
     message: {type: String, required: true},
 })
 
-// каждая сущность пользователя будет ссылаться на сущность роли
-
 module.exports = model('Blog', Blog)

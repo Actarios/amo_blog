@@ -7,6 +7,4 @@ const User = new Schema({
     roles: [{type: String, ref: 'Role'}]
 })
 
-// каждая сущность пользователя будет ссылаться на сущность роли
-
 module.exports = model('User', User)
