@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "64565934dc91f597e4d0dba8"
+  },
+  "username": "admin",
+  "email": "admin@admin.ru",
+  "password": "$2a$10$oR6LpHZePJZX2d.D2NwtQOVGGEu5e4.S6MP5Ylte/rhRcjGMRy94W",
+  "roles": [
+    "ADMIN"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645815356f4c79868bb233c6"
+  },
+  "username": "Lutik",
+  "email": "lutik@ro.ru",
+  "password": "$2a$10$gHMJHHsb0CwHHJCvD7iAdOLT3rGrrcDL3Ktk75CKTZSwvHXL./DoG",
+  "roles": [
+    "USER"
+  ],
+  "__v": 0
+}]

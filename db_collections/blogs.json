@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "6457f59c5ab7920202d611a0"
+  },
+  "username": "admin",
+  "date": {
+    "$numberLong": "1683486108587"
+  },
+  "message": "Всем привет!",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645815556f4c79868bb233ca"
+  },
+  "username": "Lutik",
+  "date": {
+    "$numberLong": "1683494229022"
+  },
+  "message": "Meow Meow Meow!",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64588ed14a9760ec9a7b1c74"
+  },
+  "username": "admin",
+  "date": {
+    "$numberLong": "1683525329008"
+  },
+  "message": "Test!",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64588f074a9760ec9a7b1c7f"
+  },
+  "username": "MegaUser",
+  "date": {
+    "$numberLong": "1683525383618"
+  },
+  "message": "How-how-how!",
+  "__v": 0
+}]
